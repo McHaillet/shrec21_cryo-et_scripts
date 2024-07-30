@@ -49,6 +49,8 @@ Once the vesicles are generated they need to be renamed by replacing `bilayer_5.
 
 ## Run tomogram simulation
 
+First, for SHREC'21 we scaled the simulated tilt-series to the power spectra of experimental images from [EMPIAR-10064](https://www.ebi.ac.uk/empiar/EMPIAR-10064/), the CTEM and mixedCTEM. These should be downloaded and placed in the folder `scaling_examples/`.
+
 To start the full tilt-series and tomogram simulation go to the shrec_models directory:
 
 ```
