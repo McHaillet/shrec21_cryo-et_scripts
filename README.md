@@ -2,7 +2,7 @@
 
 This repository contains scripts to generate the SHREC'21 cryo-ET track dataset (doi:10.34894/XRTJMA). 
 
-It makes use of PyTOM (commit: [master da64c6f]). Some of the scripts here have hard coded paths to the clone of PyTOM, specifically the following links are used directly:
+It makes use of PyTOM (commit: [master da64c6f]). Some of the scripts here have hard coded paths to the clone of PyTOM, specifically the following links are used directly and need to be updated:
 
 * simulates a tomogram from a folder of input structures: /path/to/pytom/simulation/MicrographModeller.py
 * generate electrostatic potential (real and imaginary part): /path/to/pytom/simulation/potential.py
