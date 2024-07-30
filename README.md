@@ -35,6 +35,18 @@ python call_potential.py
 
 The output from this script is generated in individual folders for each pdb and contains both an MRC with the real and imaginary part of the interaction potential. These files all need to be moved into the base folder `potential/` for the simulation to find it later.
 
+## Generate vesicles
+
+To generate membrane vesicles for the simulation the following command need to be run for each vesicle (while setting the correct path):
+
+```
+pytom /path/to/pytom/simulation/membrane.py --radius_factor 4 --spacing 5 -d potential/ --membrane_pdb /path/to/pytom/simulation/membrane_models/dppc128.pdb -x -v 300 --cores 4
+```
+
+The membrane simulation can take a lot of time as many atoms need to be sampled, the memory requirements are also high and depend on vesicle size. The `--radius_factor` determines the size of the vesicle, the default of 1 generates a vesicle approximately 45nm in diameter. The size is slightly randomized and varied over the ellipsoidal radii to generate 'random' ellipsoidal vesicles. For SHREC'21 we generated 3 vesicles with `--radius-factor` of 4 and and two with a factor of 6 (IIRC).
+
+Once the vesicles are generated they need to be renamed by replacing `bilayer_5.00A_...x...x...nm` by `v1`-`v5` to be able to read the later.
+
 ## Run tomogram simulation
 
 To start the full tilt-series and tomogram simulation go to the shrec_models directory:
