@@ -1,0 +1,1 @@
+In this folder experimental tilt-series can be placed to scale the simulated images to.
